@@ -1,8 +1,8 @@
 $text-color: #262626
 $active: #ff6a30
-$result: #61a65411
+$result: #ff964b
 @mixin header 
-    margin: 13px 0px
+    //margin: 13px 0px
     font-weight: 500
     font-size: 14px
     color: $text-color
@@ -32,9 +32,9 @@ $result: #61a65411
     font-size: 12px
     cursor: pointer
 @mixin adaptive 
-    @media screen and (max-width: 800px)  
+    @media screen and (max-width: 900px)
         display: flex
         flex-direction: column
-        width: 100%
+        max-width: 100%
         overflow-x: hidden
         clear: both

@@ -17,11 +17,15 @@ let startBtn = document.getElementById("start"),
     optExpItemInputs = document.querySelectorAll('.optionalexpenses-item'),
     chooseIncomeInput = document.querySelector('.choose-income'),
     savingsCheckboxInput = document.querySelector('#savings'),
-    savingsTotalInput = document.querySelector('.choose-sum'),
-    savingsPercentInput = document.querySelector('.choose-percent'),
+
+    savingsTotalInp = document.querySelector('.choose-sum'),
+    savingsPercentInp = document.querySelector('.choose-percent'),
+
     yearValueInput = document.querySelector('.year-value'),
     monthValueInput = document.querySelector('.month-value'),
     dayValueInput = document.querySelector('.day-value');
+
+    console.log(savingsTotalInp);
 
 let money, time;
 
@@ -124,10 +128,10 @@ savingsCheckboxInput.addEventListener('click', function() {
     }
 });
 
-savingsTotalInput.addEventListener('input', function() {
+savingsTotalInp.addEventListener('input', function() {
     if (appData.savings == true) {
-        let sum = +savingsTotalInput.value,
-            percent = +savingsPercentInput.value;
+        let sum = +savingsTotalInp.value,
+            percent = +savingsPercentInp.value;
 
         appData.monthIncome = sum/100/12*percent;
         appData.yearIncome = sum/100*percent;
@@ -137,10 +141,10 @@ savingsTotalInput.addEventListener('input', function() {
     }
 });
 
-savingsPercentInput.addEventListener('input', function() {
+savingsPercentInp.addEventListener('input', function() {
     if (appData.savings == true) {
-        let sum = +savingsTotalInput.value,
-            percent = +savingsPercentInput.value;
+        let sum = +savingsTotalInp.value,
+            percent = +savingsPercentInp.value;
 
         appData.monthIncome = sum/100/12*percent;
         appData.yearIncome = sum/100*percent;
